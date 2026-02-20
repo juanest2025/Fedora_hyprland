@@ -5,7 +5,7 @@
   "spacing": 6,
 
   "modules-left": [
-    "sway/workspaces"
+    "hyprland/workspaces"
   ],
 
   "modules-center": [
