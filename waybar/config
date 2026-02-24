@@ -2,10 +2,10 @@
   "layer": "top",
   "position": "top",
   "height": 34,
-  "spacing": 6,
+  "spacing": 0,
 
   "modules-left": [
-    "hyprland/workspaces"
+    "sway/workspaces"
   ],
 
   "modules-center": [
