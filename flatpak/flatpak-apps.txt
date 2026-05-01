@@ -1,5 +1,5 @@
 app.zen_browser.zen
 md.obsidian.Obsidian
 org.localsend.localsend_app
-org.shotcut.Shotcut
+org.onlyoffice.desktopeditors
 org.telegram.desktop
