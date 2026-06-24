@@ -1,4 +1,5 @@
 app.zen_browser.zen
+com.rustdesk.RustDesk
 md.obsidian.Obsidian
 org.localsend.localsend_app
 org.onlyoffice.desktopeditors
