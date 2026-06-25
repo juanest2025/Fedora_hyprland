@@ -1,8 +1,8 @@
 #!/bin/bash
 
 declare -A sites=(
-  ["Whatsapp"]="https://web.whatsapp.com/"
   ["Facebook"]="https://www.facebook.com"
+  ["Whatsapp"]="https://web.whatsapp.com/"
   ["Instagram"]="https://www.instagram.com/"
   ["YouTube"]="https://www.youtube.com"
   ["Discoard"]="https://discord.com/channels/@me"
@@ -24,21 +24,21 @@ declare -A sites=(
   ["latanime"]="https://latanime.org/"
   ["Hentaila"]="https://hentaila.com/hub"
   ["hentai-jl"]="https://hentaijl.com/"
-  ["uncensoredhentai"]="https://uncensoredhentai.xxx/"  
+  ["uncensoredhentai"]="https://uncensoredhentai.xxx/"
   ["JKanimes"]="https://jkanime.net/"
   ["hentaiJK"]="https://hentaijk.com/"
-
-  ["Bancolombia"]="https://svpersonas.apps.bancolombia.com/autenticacion"
   ["Google"]="https://www.google.com/"
+  ["Bancolombia"]="https://svpersonas.apps.bancolombia.com/autenticacion"
   ["Gmail"]="https://mail.google.com"
+  ["Google Photos"]="http://photos.google.com/"
   ["Correo UdeA"]="https://mail.google.com/mail/u/0/#inbox"
   ["Ude@"]="https://udearroba.udea.edu.co/internos/login/index.php"
   ["Drive"]="https://drive.google.com/drive/my-drive"
   ["Calendar"]="https://calendar.google.com/calendar/u/0/r"
   ["Meet.google"]="https://meet.google.com/landing"
   ["Monkeytype"]="https://monkeytype.com/"
-  ["Google Maps"]="https://maps.google.com/"
   ["cinecalidad.mx"]="https://cine-calidad.mx/"
+  ["Google Maps"]="https://maps.google.com/"
   ["Zoom - Ingles IV"]="https://udea.zoom.us/j/92018362786"
   ["Zoom - Geometria Vectorial"]="https://udearroba.zoom.us/j/93110155705"
   ["XVideos"]="https://www.xvideos.com/"
@@ -54,13 +54,13 @@ selection=$(printf "%s\n" "${!sites[@]}" | sort | fuzzel --dmenu --prompt="Sitio
 if [ -n "$selection" ]; then
     case "$selection" in
         "Correo UdeA"|"Ude@")
-            google-chrome-stable "${sites[$selection]}" &
+            google-chrome-stable --app="${sites[$selection]}" &
             ;;
         "XVideos"|"Pornhub")
             brave-browser --tor "${sites[$selection]}" &
             ;;
         *)
-            xdg-open "${sites[$selection]}" &
+            brave-browser --app="${sites[$selection]}" &
             ;;
     esac
 fi
