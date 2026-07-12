@@ -165,5 +165,17 @@ cp /usr/share/hyprland/hyprland.conf ~/.config/hypr/
 
 Logs de Hyprland:
 journalctl -f -u Hyprland
-
+------------------------------------------------------
+=======================================================
+stow para la administracion de las dotfiles 
+====================================================
+se instala stow
+- sudo dnf install stow
+luego en el home directoy se crea una carp que diga ~/dotfiles
+luego se mueven las dotfiles desde .config a ~/dotfiles
+te vas al ~/dotfiles
+y le das en terminal:
+-stow . 
+y asi crea un link para las dotfiles desde el ~/dotfiles a .config
+=
 FIN DE LA GUÍA
