@@ -1,15 +1,15 @@
- {
+{
   "layer": "top",
   "position": "top",
   "height": 34,
-  "spacing": 0,
+  "spacing": 6,
 
   "modules-left": [
-    "hyprland/workspaces"
+    "sway/workspaces"
   ],
 
   "modules-center": [
-    "hyprland/window"
+    "sway/window"
   ],
 
   "modules-right": [
@@ -17,6 +17,7 @@
     "pulseaudio",
     "backlight",
     "network",
+    "bluetooth",
     "battery",
     "clock",
     "tray"
@@ -33,14 +34,17 @@
     "format": "{icon} {volume}%",
     "format-muted": "󰝟 muted",
     "format-icons": {
-      "default": ["󰕿", "󰖀", "󰕾"]
+      "default": [
+        "󰕿",
+        "󰖀",
+        "󰕾"
+      ]
     },
     "on-click": "pavucontrol"
   },
 
   "backlight": {
-    "format": "{icon} {percent}%",
-    "format-icons": ["󰃞", "󰃟", "󰃠"]
+    "format": "{icon} {percent}%"
   },
 
   "network": {
@@ -50,20 +54,34 @@
     "on-click": "nm-connection-editor"
   },
 
+  "bluetooth": {
+    "exec": "rfkill list bluetooth | grep -q 'Soft blocked: no' && echo '' || echo ''",
+    "interval": 2,
+    "on-click": "blueman-manager"
+  },
+
   "battery": {
     "states": {
       "warning": 30,
       "critical": 15
     },
+
     "format": "{icon} {capacity}%",
     "format-charging": "󰂄 {capacity}%",
     "format-plugged": "󰂄 {capacity}%",
-    "format-icons": [
+    
+   "format-icons": [
       "󰂎",
       "󰁺",
+      "󰁻",
       "󰁼",
+      "󰁽",
       "󰁾",
-      "󰂀"
+      "󰁿",
+      "󰂀",
+      "󰂁",
+      "󰂂",
+      "󰁹"
     ]
   },
 
@@ -74,5 +92,4 @@
   "tray": {
     "spacing": 8
   }
-}
- 
+} 
